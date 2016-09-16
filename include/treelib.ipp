@@ -58,6 +58,11 @@ inline void TreeNode<T>::setData( const T &inData){
     }
 
 template <typename T>
+void TreeNode<T>::printData(){
+    std::cout << this->getData () << std::endl ;
+}
+
+template <typename T>
 void TreeNode<T>::printNode(){
         if( left != NULL)
             left->printNode () ;
@@ -65,14 +70,14 @@ void TreeNode<T>::printNode(){
         if( right != NULL)
             right->printNode () ;
 
-        std::cout << this->getData () << std::endl ;
+        printData() ;
 }
 
 template <typename T>
 void TreeNode<T>::printLeft(){
     if( left != NULL)
         left->printLeft () ;
-        std::cout << this->getData () << std::endl ;
+    printData() ;
 }
 
 template <typename T>

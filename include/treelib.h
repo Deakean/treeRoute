@@ -28,6 +28,7 @@ private:
 
 protected:
     virtual int compare(const T &a,const T &b) ;
+    virtual void printData() ;
 };
 
 template<typename T>
@@ -49,7 +50,7 @@ struct Route{
 
     inline bool operator < ( const Route &o) const { return ( len < o.len) ;}
     inline bool operator == ( const Route &o) const { return ( len == o.len) ;}
-    inline double operator << ( const Route &o) const { return ( o.len) ;}
+    friend std::ostream& operator<<( std::ostream& os, const Route& o) { return os << o.len ; }
 };
 
 class TreeRoute:public Treelib<Route>

@@ -21,6 +21,10 @@ int main()
 
         len = (-1)*len + 300*(++i) ;
     }
+    std::cout << "all tree" << std::endl ;
+    routes.printNode ();
+    std::cout << "all shortest" << std::endl ;
+    routes.printLeft ();
     return 0;
 }
 
