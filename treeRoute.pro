@@ -1,19 +1,21 @@
-TEMPLATE = app
+TEMPLATE = lib
 TARGET = treeRoute
-CONFIG += console c++11
+CONFIG += static
 CONFIG -= app_bundle
 CONFIG -= qt
 
+QMAKE_CXXFLAGS += -std=c++0x
+
 SOURCES +=\
-    src/main.cpp
+    src/treeroute.cpp
 
 INCLUDEPATH += \
     include/
 
-OBJECTS_DIR = bin/
-DESTDIR = bin/
+OBJECTS_DIR = lib/
+DESTDIR = lib/
 
 HEADERS += \
-    include/treelib.h \
-    include/treelib.ipp
+    include/treeroute.h \
+    include/bstree.h
 
